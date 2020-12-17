@@ -1,0 +1,162 @@
+#PENGELOLA BANK SAMPAH
+#Program oleh Ivana 
+print("BANK SAMPAH DINGDONG")
+print("Reuse, Reduce, Recycle")
+print("Jenis sampah yang diterima : \n1. Kardus/Kertas \n2. Plastik \n3. Besi")
+
+#MENU UTAMA 
+print("\nMenu Masuk: ")
+print("[1] Admin/Pengelola")
+print("[2] Nasabah")
+print("[3] Exit")
+pilih=input("Masuk sebagai : ")
+
+#ISI MENU UTAMA
+if pilih =='1':
+    userName = input("\nUser Name : ")
+    password = input("Password ? ")
+    if userName == 'admin' and password == 'AdminBSD':
+        print("\nSelamat datang admin Bank Sampah Dingdong")
+
+        #Menu Admin
+        print("\nHitung pendapatan")
+        K = float(input("\n Berat kertas = "))
+        P = float(input(" Berat plastik = "))
+        B = float(input(" Berat besi = "))
+        Total = (K * 1500) + (P * 2000) + (B * 3000)
+        print("Total pendapatan sebesar Rp%.2f" %Total)
+                
+    else:
+        print("Username atau Password Anda Salah")
+
+elif pilih =='2':
+    #Menu Nasabah
+    print("\nSelamat datang nasabah Bank Sampah Dingdong")
+    print("Layanan : ")
+    print("[1] Sedekah \n[2] Barter \n[3] Menabung \n[4] Pinjaman")
+    pilih=input("\nPilih : ")
+
+    #Isi Menu Nasabah 
+    if pilih =='1':
+        print("\nKarena Sedekah Tak Sekedar Rupiah")
+        print("\nIsi data nasabah")
+        input(" Nama : ")
+        input(" Alamat : ")
+        print(" Jenis sampah : \n[1] Kertas/Kardus \n[2] Plastik \n[3] Besi")
+        pilih = input("Pilih jenis : ")
+        if pilih =='1':
+            S = float(input("\nBerat = "))
+            sedekah = S * 1500
+            print("\nSedekah anda sebesar Rp%.2f" %sedekah)
+        elif pilih =='2':
+            S = float(input("\nBerat = "))
+            sedekah = S * 2000
+            print("\nSedekah anda sebesar Rp%.2f" %sedekah)
+        elif pilih =='3':
+            S = float(input("\nBerat = "))
+            sedekah = S * 3000
+            print("Sedekah anda sebesar Rp%.2f" %sedekah)
+        else:
+            print("Kode yang anda masukkan salah")
+        print("Terimakasih")
+
+    elif pilih =='2':
+        print("\nTukarkan Sampah Anda Disini")
+        print("\nPenukaran dilayani di loket penukaran")
+        print("\nIsi data nasabah")
+        input(" Nama : ")
+        input(" Alamat : ")
+        print(" Jenis sampah : \n[1] Kertas/Kardus \n[2] Plastik \n[3] Besi")
+        pilih = input("Pilih jenis : ")
+        if pilih =='1':
+            S = float(input("\nBerat = "))
+            konversi = S * 1500
+            print("Harga sampah anda = Rp%.2f" %konversi)
+            if konversi >= 25000:
+                print('Hasil barter = Telur ayam satu kilogram')
+            elif konversi >= 12000:
+                print('Hasil barter = Gula satu kilogram')
+            elif konversi >= 11000:
+                print('Hasil barter = Beras satu kilogram')
+            elif konversi >= 5000:
+                print('Hasil barter = Susu satu liter')
+            elif konversi >= 1500:
+                print('Hasil barter = Buku dan Pena')
+            else:
+                print('Hasil barter = Makanan ringan')
+                
+        elif pilih == '2':
+            S = float(input("\nBerat = "))
+            konversi = S * 2000
+            print("\Harga sampah anda = Rp%.2f" %konversi)
+            if konversi >= 25000:
+                print('Hasil barter = Telur ayam satu kilogram')
+            elif konversi >= 12000:
+                print('Hasil barter = Gula satu kilogram')
+            elif konversi >= 11000:
+                print('Hasil barter = Beras satu kilogram')
+            elif konversi >= 5000:
+                print('Hasil barter = Susu satu liter')
+            elif konversi >= 2000:
+                print('Hasil barter = Buku dan Pena')
+            else:
+                print('Hasil barter = Makanan ringan')
+                
+        elif pilih == '3':
+            S = float(input("\nBerat = "))
+            konversi = S * 3000
+            print("Harga sampah anda = Rp%.2f" %konversi)
+            if konversi >= 25000:
+                print('Hasil barter = Telur ayam satu kilogram')
+            elif konversi >= 12000:
+                print('Hasil barter = Gula satu kilogram')
+            elif konversi >= 11000:
+                print('Hasil barter = Beras satu kilogram')
+            elif konversi >= 5000:
+                print('Hasil barter = Susu satu liter')
+            elif konversi >= 3000:
+                print('Hasil barter = Buku dan Pena')
+            else:
+                print('Hasil barter = Makanan ringan')
+        else:
+            print("Kode yang anda masukkan salah")
+
+    elif pilih =='3':
+        print("Ayo Nabung Sampah")
+        print("\nIsi data nasabah")
+        input(" Nama : ")
+        input(" Alamat : ")
+        print(" Jenis sampah : \n[1] Kertas/Kardus \n[2] Plastik \n[3] Besi")
+        pilih = input("Pilih jenis : ")
+        if pilih =='1':
+            S = float(input("\nBerat = "))
+            tabungan = S * 2000
+            print("Tabungan anda sebesar = Rp%.2f \nTerimakasih" %tabungan)
+
+        elif pilih == '2':
+            S = float(input("\nBerat = "))
+            tabungan = S * 1500
+            print("Tabungan anda sebesar = Rp%.2f \nTerimakasih" %tabungan)
+
+        elif pilih == '3':
+            S = float(input("\nBerat = "))
+            tabungan = S * 3000
+            print("Tabungan anda sebesar = Rp%.2f \nTerimakasih" %tabungan)
+        else:
+            print("Kode yang anda masukkan salah")
+            
+    elif pilih =='4':
+        print("Pinjaman Bank Sampah Dingdong")
+        print("\nIsi data nasabah")
+        input(" Nama : ")
+        input(" Alamat : ")
+        float(input(" Besar pinjaman = Rp"))
+        if pinjaman >='500001':
+            print("Maaf pinjaman tidak tersedia")
+        else:
+            print("Gunakan dana pinjaman dengan bijaksana \nDana yang dipinjam dapat dikembalikan dengan menyetorkan sampah atau uang selama 3 bulan")
+elif pilih =='3':
+    print("Terimakasih \nExit..")
+
+else:
+    print("Kode yang anda masukkan salah")
